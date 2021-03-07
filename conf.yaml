@@ -1,0 +1,36 @@
+version: v1.0.1
+moduledir: /Users/kun/workspace/bean/bin
+ip: 0.0.0.0
+port: 8080
+mysql:
+  ip: 127.0.0.1
+  port: 3306
+  user: root
+  password: 12345678
+  database: bean
+
+redis:
+  ip: 127.0.0.1
+  port: 2379
+  user: root
+  password: 123456
+  database: 1
+  pool_size: 256
+
+modules:
+  - name: apple
+    enable: true
+    version: v1.0.1
+    params:
+      - name: ip
+        value: 127.0.0.1
+      - name: user
+        value: root
+  - name: sso
+    enable: false
+    version: v1.0.1
+    params:
+      - name: ip
+        value: 127.0.0.1
+      - name: user
+        value: root
